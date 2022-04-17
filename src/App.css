@@ -1,0 +1,34 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary: #6e9d58;
+  --secondary: #dde9d8;
+  --other: #023564;
+  --other-secondary: #eaf6ff;
+  --buttons: #f6ae2d;
+  --font: black;
+  --red: rgb(231, 87, 87);
+  --blue-text:#2f9bff;
+  --white:white;
+  --fav:red;
+  --grey:grey;
+
+}
+
+body {
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+}
+
+@media screen and (max-width:747px){
+  
+  .content,.main-content-ecom{
+    margin: 10rem auto !important; 
+  }
+  /* had to put this important to override the CSS margin property because of which the products were getting hidden by navbar  */
+}
