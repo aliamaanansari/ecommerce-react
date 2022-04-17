@@ -1,4 +1,3 @@
-import axios from "axios";
 import { removeFromCart } from "./CardService";
 
 export const handleAddToWishlist = (wishlist, item, dispatch) => {

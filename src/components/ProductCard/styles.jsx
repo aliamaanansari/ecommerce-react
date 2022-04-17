@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { mobile } from "../../responsive";
 import { colors } from "../../themes";
 
 export const SideContainer = styled.div`
