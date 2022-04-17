@@ -1,6 +1,15 @@
 import { Link } from "react-router-dom";
 
+import { useContext } from "react";
+import {
+  calculateFinalCartPrice,
+  findPriceOfAllItems,
+  removeFromCart,
+  updateProductQty,
+} from "../../CardService";
 import { Nav } from "../../components/Nav/index";
+import { MainContext } from "../../Context";
+import { handleAddToWishlist } from "../../wishlistServices";
 import {
   Add,
   AddtoWishlist,
@@ -9,7 +18,6 @@ import {
   Bottom,
   ButtonContainer,
   Checkout,
-  Color,
   Container,
   FinalAmount,
   Heading,
@@ -23,7 +31,6 @@ import {
   Remove,
   RemoveFromCart,
   ShoppingButton,
-  Size,
   Summary,
   SummaryHeading,
   SummaryPrice,
@@ -35,15 +42,6 @@ import {
   TopText,
   Wrapper,
 } from "./styles";
-import { useContext } from "react";
-import { MainContext } from "../../Context";
-import {
-  calculateFinalCartPrice,
-  findPriceOfAllItems,
-  removeFromCart,
-  updateProductQty,
-} from "../../CardService";
-import { handleAddToWishlist } from "../../wishlistServices";
 
 const Cart = () => {
   const { state, dispatch } = useContext(MainContext);

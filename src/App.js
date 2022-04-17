@@ -1,16 +1,15 @@
+import { useContext, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { MainContext } from "./Context";
+import Cart from "./pages/Cart/index";
 import Forget from "./pages/Forget/index.jsx";
 import Home from "./pages/Home";
 import LoginPage from "./pages/LoginPage";
 import ProductItems from "./pages/ProductItems/index";
 import Register from "./pages/Register/index";
 import SingleProduct from "./pages/SingleProduct/index.jsx";
-import Cart from "./pages/Cart/index";
-import AllProducts from "./components/AllProducts/";
-import { MainContext } from "./Context";
-import { useContext, useEffect } from "react";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import Wishlist from "./pages/Wishlist";
 
 function App() {
@@ -26,7 +25,7 @@ function App() {
       }
     }
     fetchData();
-  }, []);
+  }, [dispatch, state]);
 
   return (
     <>
