@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Cart from "./pages/Cart";
 import CategoryPage from "./pages/CategoryPage";
 import Forget from "./pages/Forget";
 import Login from "./pages/LoginPage";
@@ -20,7 +21,8 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/" element={<Home />} />
         <Route path="/product/:productId" element={<ProductPage />} />
-        <Route path="/category/:categoryId" element={<CategoryPage />} />
+        <Route path="/category/:categoryId" element={<CategoryPage />} />{" "}
+        <Route path="/cart" element={<Cart />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>
