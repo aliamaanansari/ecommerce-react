@@ -6,8 +6,8 @@ import Forget from "./pages/Forget";
 import Login from "./pages/LoginPage";
 import Home from "./pages/Home";
 import NotFoundPage from "./pages/NotFoundPage";
-import ProductPage from "./pages/ProductPage";
 import ProductsPage from "./pages/ProductsPage";
+import SingleProduct from "./pages/SingleProduct";
 import Register from "./pages/Register";
 
 function App() {
@@ -16,12 +16,11 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/products" element={<ProductsPage />} />
+        <Route path="/product/:productId" element={<SingleProduct />} />
         <Route path="/login" element={<Login />} />
         <Route path="/forgot-password" element={<Forget />} />
         <Route path="/register" element={<Register />} />
         <Route path="/" element={<Home />} />
-        <Route path="/product/:productId" element={<ProductPage />} />
-        <Route path="/category/:categoryId" element={<CategoryPage />} />{" "}
         <Route path="/cart" element={<Cart />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
