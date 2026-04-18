@@ -98,7 +98,7 @@ const Cart = () => {
                                 updateProductQty(
                                   item._id,
                                   dispatch,
-                                  "DECREMENT_QUANTITY"
+                                  "DECREMENT_QUANTITY",
                                 )
                               }
                             >
@@ -111,7 +111,7 @@ const Cart = () => {
                                 updateProductQty(
                                   item._id,
                                   dispatch,
-                                  "INCREMENT_QUANTITY"
+                                  "INCREMENT_QUANTITY",
                                 );
                                 e.stopPropogation();
                               }}
@@ -127,7 +127,7 @@ const Cart = () => {
                               handleAddToWishlist(
                                 state.wishlist,
                                 item,
-                                dispatch
+                                dispatch,
                               )
                             }
                           >
