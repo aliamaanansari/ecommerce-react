@@ -1,9 +1,9 @@
 import { DeleteOutlined, Star } from "@material-ui/icons";
-import React, { useContext, useState } from "react";
+import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { Nav } from "../../components/Nav/index";
 import { MainContext } from "../../Context";
 import { removeFromWishlist } from "../../wishlistServices";
-import { Nav } from "../../components/Nav/index";
 import {
   Bottom,
   Button,
@@ -105,7 +105,6 @@ const Wishlist = () => {
           </Text>
         </Bottom>
       </Wrapper>
-
     </Container>
   );
 };

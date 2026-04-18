@@ -1,24 +1,21 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 
-import { Search, ShoppingCartOutlined, Favorite } from "@material-ui/icons";
 import { Badge } from "@material-ui/core";
+
+import { Favorite, ShoppingCartOutlined } from "@material-ui/icons";
 import { Link, useNavigate } from "react-router-dom";
 
+import { MainContext } from "../../Context";
 import {
   Center,
   Container,
-  Input,
   Item,
-  Lang,
-  Left,
   Loginbtn,
   Logo,
   NavComponent,
   Right,
-  SearchContainer,
   StyledLink,
 } from "./styles";
-import { MainContext } from "../../Context";
 
 export const Nav = () => {
   const { state } = useContext(MainContext);

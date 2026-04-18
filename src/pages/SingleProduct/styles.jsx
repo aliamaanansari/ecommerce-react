@@ -7,7 +7,6 @@ export const Wrapper = styled.div`
   display: flex;
   padding: 3rem;
   ${mobile({
-    padding: "1rem",
     flexDirection: "column",
     padding: "0.8rem 0rem",
   })}

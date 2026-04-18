@@ -1,10 +1,9 @@
-import axios from "axios";
 import { removeFromCart } from "./CardService";
 
 export const handleAddToWishlist = (wishlist, item, dispatch) => {
   console.log({ wishlist, item, dispatch });
   const isItemPresent = wishlist?.find(
-    (itemInWishlist) => itemInWishlist._id === item._id
+    (itemInWishlist) => itemInWishlist._id === item._id,
   );
   if (!isItemPresent) {
     addToWishlist(item, dispatch);
